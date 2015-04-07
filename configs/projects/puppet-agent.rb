@@ -28,7 +28,7 @@ project "puppet-agent" do |proj|
   # First our stuff
   proj.component "puppet"
   proj.component "facter"
-  unless ( proj.get_platform.is_eos? or proj.get_platform.is_nxos? )
+  unless ( proj.get_platform.is_eos? or proj.get_platform.is_nxos? or proj.get_platform.is_osx? )
     proj.component "cfacter"
   end
   proj.component "hiera"
